@@ -2,6 +2,11 @@
 
 This is an iOS App which shows live AQI (Air quality index) data for different cities using Web-socket.
 
+## Basic details
+- Deployment target: **iOS 13.0**
+- Supported device: **iPhone & iPad**
+- Code architecture: **MVVM**
+
 ## Features
 - Live AQI data for 12 cities.
 - Detail screen which show live AQI chart for selected city.
