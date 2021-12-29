@@ -89,7 +89,7 @@ extension AQIListViewController: AQIListDelegate {
 
 extension AQIListViewController: SocketDelegate
 {
-    func socketStatuDidUpdate(isConnected: Bool, error: String?) {
+    func socketStatusDidUpdate(isConnected: Bool, error: String?) {
         self.aqiListTableView.isHidden = !isConnected
         self.errorView.isHidden = isConnected
         self.errorLabel.text = error

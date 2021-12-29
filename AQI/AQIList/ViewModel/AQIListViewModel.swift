@@ -9,7 +9,7 @@ import Foundation
 import Starscream
 
 protocol SocketDelegate: AnyObject {
-    func socketStatuDidUpdate(isConnected: Bool, error: String?)
+    func socketStatusDidUpdate(isConnected: Bool, error: String?)
 }
 
 protocol AQIListDelegate: AnyObject {
@@ -109,7 +109,7 @@ class AQIListViewModel
             errorMessage = Message.webSocketError
         }
         if let delegate = self.socketDelegate {
-            delegate.socketStatuDidUpdate(isConnected: false, error: errorMessage)
+            delegate.socketStatusDidUpdate(isConnected: false, error: errorMessage)
         }
     }
 }
@@ -124,14 +124,14 @@ extension AQIListViewModel: WebSocketDelegate
             print("websocket is connected: \(headers)")
             self.isConnected = true
             if let delegate = self.socketDelegate {
-                delegate.socketStatuDidUpdate(isConnected: true, error: nil)
+                delegate.socketStatusDidUpdate(isConnected: true, error: nil)
             }
             
         case .disconnected(let reason, let code):
             print("websocket is disconnected: \(reason) with code: \(code)")
             self.isConnected = false
             if let delegate = self.socketDelegate {
-                delegate.socketStatuDidUpdate(isConnected: false, error: reason)
+                delegate.socketStatusDidUpdate(isConnected: false, error: reason)
             }
             
         case .text(let string):
