@@ -7,6 +7,7 @@ This is an iOS App which shows live AQI (Air quality index) data for different c
 ![Simulator Screen Shot - iPhone 13 - 2021-12-29 at 19 11 18](https://user-images.githubusercontent.com/96768526/147670281-4c3ddeb7-a47d-40d7-89c4-db9fbb906d17.png)
 ![Simulator Screen Shot - iPhone 13 - 2021-12-29 at 19 12 11](https://user-images.githubusercontent.com/96768526/147670351-53dafff4-ecfb-4b0b-84e4-3b6023d5b870.png)
 ![Simulator Screen Shot - iPhone 13 - 2021-12-29 at 19 13 45](https://user-images.githubusercontent.com/96768526/147670450-2f4a4447-030c-4f2f-9c97-8fb3df3c1c74.png)
+![Simulator Screen Shot - iPhone 13 - 2021-12-29 at 19 44 30](https://user-images.githubusercontent.com/96768526/147671252-a44aab8f-3342-46ae-8e81-0477eeff4c76.png)
 
 ## Basic details
 - Deployment target: **iOS 13.0**
