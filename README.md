@@ -53,7 +53,7 @@ This is an iOS App which shows live AQI (Air quality index) data for different c
     - For the sake of demo and for better chart UI, only 20 records are stored for AQI history.
 
 - Reconnect Socket
-    - Observers for *didEnterBackgroundNotification* and *willEnterForegroundNotification* are used to open and close the connection to Web-socket. If not used reconnection logic, it will stop getting Socket updates while coming back from App background mode.
+    - Observers for *didEnterBackgroundNotification* and *willEnterForegroundNotification* are used to open and close the connection to Web-socket. If not used reconnection logic, iOS system will stop getting Socket updates while coming back from App background mode.
 
 ## Time taken
 - Choose socket library and its use: 2 Hours
