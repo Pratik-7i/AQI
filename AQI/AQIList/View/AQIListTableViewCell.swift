@@ -9,13 +9,13 @@ import UIKit
 
 class AQIListTableViewCell: UITableViewCell
 {
-    @IBOutlet var containerView   : UIView!
-    @IBOutlet var colorView       : UIView!
-    @IBOutlet var cityNameLabel   : UILabel!
-    @IBOutlet var cityAqiLabel    : UILabel!
-    @IBOutlet var aqiView         : UIView!
-    @IBOutlet var airQualityLabel : UILabel!
-    @IBOutlet var timeAgoLable    : UILabel!
+    @IBOutlet weak var containerView   : UIView!
+    @IBOutlet weak var colorView       : UIView!
+    @IBOutlet weak var cityNameLabel   : UILabel!
+    @IBOutlet weak var cityAqiLabel    : UILabel!
+    @IBOutlet weak var aqiView         : UIView!
+    @IBOutlet weak var airQualityLabel : UILabel!
+    @IBOutlet weak var timeAgoLable    : UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

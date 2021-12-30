@@ -10,9 +10,9 @@ import Starscream
 
 class AQIListViewController: UIViewController
 {
-    @IBOutlet var errorView        : UIView!
-    @IBOutlet var errorLabel       : UILabel!
-    @IBOutlet var aqiListTableView : UITableView!
+    @IBOutlet weak var errorView        : UIView!
+    @IBOutlet weak var errorLabel       : UILabel!
+    @IBOutlet weak var aqiListTableView : UITableView!
 
     private var backgroundbObserver: NSObjectProtocol?
     private var foregroundObserver: NSObjectProtocol?

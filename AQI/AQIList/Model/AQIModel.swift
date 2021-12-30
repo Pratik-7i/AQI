@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ResponseModel: Codable
+final class ResponseModel: Codable
 {
     var cityName : String
     var cityAqi  : Double
@@ -18,7 +18,7 @@ class ResponseModel: Codable
     }
 }
 
-class CityModel
+final class CityModel
 {
     var name       : String
     var aqiHistory = [AQIModel]()
@@ -28,7 +28,7 @@ class CityModel
     }
 }
 
-class AQIModel
+final class AQIModel
 {
     var aqi      : Double
     var category : AQICategory

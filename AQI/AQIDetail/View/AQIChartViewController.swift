@@ -11,7 +11,7 @@ import Charts
 
 class AQIChartViewController: UIViewController
 {
-    @IBOutlet var chartView: LineChartView!
+    @IBOutlet weak var chartView: LineChartView!
 
     lazy var viewModel : AQIChartViewModel = {
         let viewModel = AQIChartViewModel()
