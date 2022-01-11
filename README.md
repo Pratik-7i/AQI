@@ -49,7 +49,7 @@ This is an iOS App which shows live AQI (Air quality index) data for different c
     - AQICategory Enum is created based on the AQI value and each category is assigned Title and Color. 
 
 - Create chart data
-    - AQI history is looped through and array of *ChartDataEntry* is created and then **Data set** is created. 
+    - AQI history is looped through and array of *ChartDataEntry* is created and then *Data set* is created. 
     - X-Axis time values are assigned through *dataPoints* array. 
     - For the sake of demo and for better chart UI, only 20 records are stored for AQI history.
 
