@@ -40,7 +40,7 @@ This is an iOS App which shows live AQI (Air quality index) data for different c
 
 - AQI chart for city
     - Once user select any city, it will pass *CityModel* to the detail screen. As data is shared among two screen, *Class* is used so it automatically refresh the chart.
-    - *View* will ask *ViewModel* to prepare datasource based on history data and after Chart data is prepared, it will updates *View* using delegate to refresh the chart.
+    - *View* will ask *ViewModel* to prepare datasource based on history data and after Chart data is prepared, it will update *View* using delegate to refresh the chart.
     - If there is an AQI update for selected city, *ViewModel* of City list will update *ViewModel* of chart view, which will updated the chart datasource and will update to *View* to refresh the chart.
 
 ## Logic
