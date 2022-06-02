@@ -1,4 +1,4 @@
-# AQI - Assignment
+# AQI (Air Quality Index)
 
 This is an iOS App which shows live AQI (Air quality index) data for different cities using Web-socket.
 
