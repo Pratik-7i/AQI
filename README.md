@@ -33,28 +33,28 @@ This is an iOS App which shows live AQI (Air quality index) data for different c
 - MVVM code architecture pattern is used.
 
 - City list
-    - *ViewModel* of City list connects to the web socket and listens to the callbacks.
-    - It creates *CityModel* if it doesn't already exist (using city name) and adds *AQIModel* in aqi history array. If city already exist, it just adds *AQIModel*.
-    - Once datasource is prepared, *ViewModel* updates *View* using delegate to refresh the table.
-    - If there is error in socket connection, it updates *View* and user is promoted with error message with *Retry* button.
+    - `ViewModel` of City list connects to the web socket and listens to the callbacks.
+    - It creates `CityModel` if it doesn't already exist (using city name) and adds `AQIModel` in aqi history array. If city already exist, it just adds `AQIModel`.
+    - Once datasource is prepared, `ViewModel` updates `View` using delegate to refresh the table.
+    - If there is error in socket connection, it updates `View` and user is promoted with error message with `Retry` button.
 
 - AQI chart for city
-    - Once user select any city, it will pass *CityModel* to the detail screen. As data is shared among two screen, *Class* is used so it automatically refresh the chart.
-    - *View* will ask *ViewModel* to prepare datasource based on history data and after Chart data is prepared, it will update *View* using delegate to refresh the chart.
-    - If there is an AQI update for selected city, *ViewModel* of City list will update *ViewModel* of chart view, which will updated the chart datasource and will update to *View* to refresh the chart.
+    - Once user select any city, it will pass `CityModel` to the detail screen. As data is shared among two screen, `Class` is used so it automatically refresh the chart.
+    - `View` will ask `ViewModel` to prepare datasource based on history data and after Chart data is prepared, it will update `View` using delegate to refresh the chart.
+    - If there is an AQI update for selected city, `ViewModel` of City list will update `ViewModel` of chart view, which will updated the chart datasource and will update to `View` to refresh the chart.
 
 ## Logic
 - Create city list
-    - Response array is looped through and existing datasource is checked whether it contains a city with *cityName*. If not, new instance is created for city and AQI record is added to history. 
+    - Response array is looped through and existing datasource is checked whether it contains a city with `cityName`. If not, new instance is created for city and AQI record is added to history. 
     - AQICategory Enum is created based on the AQI value and each category is assigned Title and Color. 
 
 - Create chart data
-    - AQI history is looped through and array of *ChartDataEntry* is created and then *Data set* is created. 
-    - X-Axis time values are assigned through *dataPoints* array. 
+    - AQI history is looped through and array of `ChartDataEntry` is created and then `Data set` is created. 
+    - X-Axis time values are assigned through `dataPoints` array. 
     - For the sake of demo and for better chart UI, only 20 records are stored for AQI history.
 
 - Reconnect Socket
-    - Observers for *didEnterBackgroundNotification* and *willEnterForegroundNotification* are used to open and close the connection to Web-socket. If not used reconnection logic, iOS system will stop getting Socket updates while coming back from App background mode.
+    - Observers for `didEnterBackgroundNotification` and `willEnterForegroundNotification` are used to open and close the connection to Web-socket. If not used reconnection logic, iOS system will stop getting Socket updates while coming back from App background mode.
 
 ## Time taken
 - Choose socket library and its use: 2 Hours
