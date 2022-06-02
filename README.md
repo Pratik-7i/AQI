@@ -26,11 +26,11 @@ This is an iOS App which shows live AQI (Air quality index) data for different c
 
 ## Note
 - For the sake of assignment, history is kept upto 20 records.
-- Suppose AQI value is *50.23* which lies between *Good* and *Satisfactory* Categoty. In that case, it is consider to be in *Good* category. We can change this logic as required.
-- Swift Packgae Manager (SPM) is used to manage project dependencies.
+- Suppose AQI value is *50.23* which lies between `Good` and `Satisfactory` Categoty. In that case, it is consider to be in `Good` category. We can change this logic as required.
+- `Swift Packgae Manager` (SPM) is used to manage project dependencies.
 
 ## Architecture
-- MVVM code architecture pattern is used.
+- `MVVM` code architecture pattern is used.
 
 - City list
     - `ViewModel` of City list connects to the web socket and listens to the callbacks.
